@@ -37,11 +37,11 @@ export const GlobalData = () => {
             navigate('/country',{replace:true});}  
     }
 
-    countrydata && countrydata.map((obj)=>(
+    countrydata && countrydata.map((obj)=>((
         GlobalStatistics.TotalCases+=obj.cases,
         GlobalStatistics.ActiveCases+=obj.active,
         GlobalStatistics.ResolvedCases+=obj.recovered,
-        GlobalStatistics.DeathCases+=obj.deaths))
+        GlobalStatistics.DeathCases+=obj.deaths)))
         
     if(dataloading){
         return(
